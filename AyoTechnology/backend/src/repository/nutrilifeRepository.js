@@ -1,5 +1,6 @@
 import con from "./connection.js";
 
+//adiciona paciente
 export async function inserirPaciente(paciente){
     const comando = `
    INSERT INTO tb_cadastro (nome, data_nascimento, genero, email, telefone, endereco, info_saude)
