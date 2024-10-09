@@ -1,0 +1,25 @@
+
+/* Estilizando a barra de rolagem para WebKit */
+::-webkit-scrollbar {
+    width: 12px; /* Largura da barra de rolagem */
+  }
+  
+  ::-webkit-scrollbar-track {
+    background: #f1f1f1; /* Cor de fundo da trilha */
+  }
+  
+  ::-webkit-scrollbar-thumb {
+    background: #888; /* Cor do "polegar" da barra de rolagem */
+    border-radius: 10px; /* Arredondar os cantos */
+  }
+  
+  ::-webkit-scrollbar-thumb:hover {
+    background: #555; /* Cor do "polegar" ao passar o mouse */
+  }
+  
+  /* Estilizando a barra de rolagem para Firefox */
+  .scrollable-element {
+    scrollbar-width: thin; /* Opções: auto, thin */
+    scrollbar-color: #888 #f1f1f1; /* Cor do polegar e da trilha */
+  }
+  

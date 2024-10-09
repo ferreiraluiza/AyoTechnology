@@ -11,6 +11,9 @@ export default {
         poppins:['Poppins', 'sans-serif'],
         bebas:['Bebas nue', 'sans-serif']
       },
+      fontSize:{
+        medio: "2.5rem"
+      }
     },
   },
   plugins: [],
