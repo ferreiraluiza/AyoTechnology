@@ -1,3 +1,5 @@
+import { useState } from "react";
+import { CircleUserRound } from "lucide-react";
 export default function Landing() {
   return (
     <div>
@@ -56,6 +58,8 @@ export default function Landing() {
       <div
         className="h-screen bg-cover bg-center"
         style={{ backgroundImage: `url(${"/assets/image/imagem2.svg"})` }}>
+
+          <h1>Conheça nossa equipe</h1>
 
         
       </div>
