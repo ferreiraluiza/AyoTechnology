@@ -62,9 +62,36 @@ export default function Landing() {
         <div className="flex justify-center items-center py-9">
           <h1 className="text-6xl font-bold font-montserrat text-center">Conheça nossa equipe</h1>
         </div>
+      </div>
+      {/*terceira tela*/}
 
-        {/*cards*/}
-        
+      <div className="h-screen bg-cover bg-center"
+        style={{ backgroundImage: `url(${"/assets/image/imagem1.svg"})` }}>
+
+        <div className="flex justify-center items-center text-center py-9 flex-col mx-16 ">
+          <h1 className=" text-5xl font-bold font-montserrat  text-purple-500 py-9">Sobre nós</h1>
+          <div className="text-zinc-100 text-2xl">
+
+            <p> Na Ayo technology, acreditamos no poder da tecnologia para transformar o mundo. Fundada em 2024, nossa empresa se dedica a criar soluções de software inovadoras que atendem às necessidades de empresas e indivíduos em constante evolução. <br />
+              <br />
+              Com uma equipe de desenvolvedores talentosos e apaixonados, nos especializamos em desenvolver software personalizado que simplifica processos complexos, melhora a eficiência e oferece experiências digitais excepcionais. Trabalhamos em parceria com nossos clientes para entender profundamente seus desafios e oportunidades, criando soluções sob medida que realmente fazem a diferença. <br />
+
+              <br /> Nossa missão é capacitar nossos clientes com ferramentas tecnológicas que os ajudem a alcançar seus objetivos, seja otimizar operações internas, melhorar a comunicação com clientes ou inovar em seus mercados. Acreditamos que um software bem projetado não é apenas funcional, mas também intuitivo e agradável de usar.
+
+              <br />   Com um compromisso inabalável com a qualidade, a segurança e a inovação, estamos sempre explorando as últimas tendências e tecnologias para oferecer soluções que estejam à frente do seu tempo. Para nós, cada projeto é uma oportunidade de criar algo extraordinário, que não só atenda às expectativas, mas as supere.
+
+              Junte-se a nós nessa jornada de transformação digital. Vamos construir o futuro juntos, um software de cada vez.</p>
+          </div>
+        </div>
+        <div className="flex flex-col justify-center items-center">
+          <h2 className="text-purple-500">entre em contato conosco:</h2>
+
+          <div className="flex flex-row">
+            <h3 className="text-zinc-100 font-bold">telefone: </h3>
+            <p className="text-zinc-100">11 9220-9924</p>
+          </div>
+        </div>
+
       </div>
     </div>
   );
