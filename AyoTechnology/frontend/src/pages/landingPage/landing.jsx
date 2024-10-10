@@ -1,5 +1,4 @@
-import { useState } from "react";
-import { CircleUserRound } from "lucide-react";
+import { useState } from "react"
 export default function Landing() {
   return (
     <div>
@@ -65,16 +64,8 @@ export default function Landing() {
         </div>
 
         {/*cards*/}
-
-        <div className="flex justify-center items-center">
-
-          <div>
-            
-          </div>
-
-        </div>
+        
       </div>
-
     </div>
   );
 }
