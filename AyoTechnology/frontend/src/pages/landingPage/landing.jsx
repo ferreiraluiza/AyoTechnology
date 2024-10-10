@@ -5,11 +5,12 @@ export default function Landing() {
     <div>
       {/*primeira tela*/}
       <div
-        className="h-screen bg-cover bg-center"
+        className="h-screen bg-cover bg-center "
         style={{ backgroundImage: `url(${"/assets/image/imagem1.svg"})` }}
       >
         {/*cabeçalho*/}
-        <div className="text-zinc-100 flex justify-between items-center text-center   mx-32  mb-32 py-7 ">
+        <div className="text-zinc-100 flex justify-between items-center text-center mx-32 mb-32
+        py-7">
 
           <button className="relative inline-flex items-center px-6 py-2  border-2 border-transparent rounded-full bg-transparent group ">
             <p className=" font-montserrat text-2xl">Sobre nós</p>
@@ -51,17 +52,27 @@ export default function Landing() {
             </p>
           </div>
         </div>
-
-
       </div>
+
+
       {/*segunda tela */}
       <div
-        className="h-screen bg-cover bg-center"
+        className="h-screen bg-cover bg-center text-zinc-100"
         style={{ backgroundImage: `url(${"/assets/image/imagem2.svg"})` }}>
 
-          <h1>Conheça nossa equipe</h1>
+        <div className="flex justify-center items-center py-9">
+          <h1 className="text-6xl font-bold font-montserrat text-center">Conheça nossa equipe</h1>
+        </div>
 
-        
+        {/*cards*/}
+
+        <div className="flex justify-center items-center">
+
+          <div>
+            
+          </div>
+
+        </div>
       </div>
 
     </div>

@@ -6,3 +6,12 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+
+
+@layer utilities{
+    .scrollbar{
+        @apply  overflow-auto scrollbar-thin scrollbar-thumb-violet-800 scrollbar-track-zinc-900 ;
+        
+    }
+}
