@@ -78,7 +78,7 @@ export default function Landing() {
 
               <br /> Nossa missão é capacitar nossos clientes com ferramentas tecnológicas que os ajudem a alcançar seus objetivos, seja otimizar operações internas, melhorar a comunicação com clientes ou inovar em seus mercados. Acreditamos que um software bem projetado não é apenas funcional, mas também intuitivo e agradável de usar.
 
-              <br />   Com um compromisso inabalável com a qualidade, a segurança e a inovação, estamos sempre explorando as últimas tendências e tecnologias para oferecer soluções que estejam à frente do seu tempo. Para nós, cada projeto é uma oportunidade de criar algo extraordinário, que não só atenda às expectativas, mas as supere.
+              <br /> Com um compromisso inabalável com a qualidade, a segurança e a inovação, estamos sempre explorando as últimas tendências e tecnologias para oferecer soluções que estejam à frente do seu tempo. Para nós, cada projeto é uma oportunidade de criar algo extraordinário, que não só atenda às expectativas, mas as supere.
 
               Junte-se a nós nessa jornada de transformação digital. Vamos construir o futuro juntos, um software de cada vez.</p>
           </div>
