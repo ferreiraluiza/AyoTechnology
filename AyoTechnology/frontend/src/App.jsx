@@ -62,45 +62,55 @@ export default function App() {
           </h1>
         </div>
 
-        <div className="flex justify-center items-center text-center flex-col py-9">
+        <div className="flex justify-center items-center text-center flex-col font-montserrat">
+          <div className="flex flex-row items-center justify-center m-44 space-x-48">
+            <div className="flex flex-col  ">
+              <div className="bg-violet-600 rounded-full w-24 h-24 flex items-center justify-center mx-auto">
+                <img src="/assets/image/user.png" />
+              </div>
 
-          <div className="flex flex-row">
-            
-          <div className="flex flex-col">
-            <div className="bg-violet-600 rounded-full w-16 h-16 flex items-center justify-center mx-auto">
-              <img src="/assets/image/user.png" className="" />
+              <h2 className="text-zinc-100 mt-3 font-semibold">João Victor</h2>
+              <p className="text-zinc-100 w-96 text-lg ">
+                Sou um programador em formação, e cada dia parece uma nova
+                descoberta. No começo, fiquei um pouco perdido com tanta coisa
+                para aprender, desde lógica de programação até as diferentes
+                linguagens e frameworks. Mas, aos poucos, estou pegando o jeito.
+              </p>
             </div>
 
-            <h2 className="text-zinc-100 mt-2">João Victor</h2>
-            <p className="text-zinc-100">um simples dev que está se formando</p>
-            <p className="text-zinc-100">um simples dev que está se formando</p>
-            <p className="text-zinc-100">um simples dev que está se formando</p>
-          </div>
+            <div className="flex flex-col ">
+              <div className="bg-violet-600 rounded-full w-24 h-24 flex items-center justify-center mx-auto">
+                <img src="/assets/image/user.png" />
+              </div>
 
-            <div className="flex flex-col">
-            <div className="bg-violet-600 rounded-full w-16 h-16 flex items-center justify-center mx-auto">
-              <img src="/assets/image/user.png" className="" />
+              <h2 className="text-zinc-100 mt-3 font-semibold">
+                Arthur teodoro
+              </h2>
+              <p className="text-zinc-100 w-96 text-lg">
+                Sou um programador em formação, e cada dia parece uma nova
+                descoberta. No começo, fiquei um pouco perdido com tanta coisa
+                para aprender, desde lógica de programação até as diferentes
+                linguagens e frameworks. Mas, aos poucos, estou pegando o jeito.
+              </p>
             </div>
 
-            <h2 className="text-zinc-100 mt-2">Arthur teodoro</h2>
-            <p className="text-zinc-100">um simples dev que está se formando</p>
-            <p className="text-zinc-100">um simples dev que está se formando</p>
-            <p className="text-zinc-100">um simples dev que está se formando</p>
-          </div>
+            <div className="flex flex-col ">
+              <div className="bg-violet-600 rounded-full w-24 h-24 flex items-center justify-center mx-auto">
+                <img src="/assets/image/user.png" />
+              </div>
 
-          <div className="flex flex-col">
-            <div className="bg-violet-600 rounded-full w-16 h-16 flex items-center justify-center mx-auto">
-              <img src="/assets/image/user.png" className="" />
+              <h2 className="text-zinc-100 mt-3 font-semibold">Anna Luiza</h2>
+              <p className="text-zinc-100 w-96 text-lg">
+                Sou um programador em formação, e cada dia parece uma nova
+                descoberta. No começo, fiquei um pouco perdido com tanta coisa
+                para aprender, desde lógica de programação até as diferentes
+                linguagens e frameworks. Mas, aos poucos, estou pegando o jeito.
+              </p>
             </div>
-
-            <h2 className="text-zinc-100 mt-2">Anna Luiza</h2>
-            <p className="text-zinc-100">um simples dev que está se formando</p>
-            <p className="text-zinc-100">um simples dev que está se formando</p>
-            <p className="text-zinc-100">um simples dev que está se formando</p>
-          </div>
           </div>
         </div>
       </div>
+
       {/*terceira tela*/}
 
       <div
@@ -113,8 +123,7 @@ export default function App() {
           </h1>
 
           <div className="text-zinc-100 text-2xl px-28">
-            <p>
-              {" "}
+            <p className="font-poppins">
               Na Ayo technology, acreditamos no poder da tecnologia para
               transformar o mundo. Fundada em 2024, nossa empresa se dedica a
               criar soluções de software inovadoras que atendem às necessidades
@@ -140,12 +149,56 @@ export default function App() {
             </p>
           </div>
         </div>
-        <div className="flex flex-col justify-center items-center">
-          <h2 className="text-purple-500">entre em contato conosco:</h2>
 
-          <div className="flex flex-row">
-            <h3 className="text-zinc-100 font-bold">telefone: </h3>
-            <p className="text-zinc-100">11 9220-9924</p>
+        <div className="flex flex-row justify-center ">
+          <div className="">
+            <h2 className="text-violet-500 text-lg font-bold font-montserrat">
+              entre em contato conosco:
+            </h2>
+
+            <div className="flex flex-row font-poppins ">
+              <h3 className="text-zinc-100 font-bold px-1">Telefone: </h3>
+              <p className="text-zinc-100">11 9220-9924</p>
+            </div>
+            <div className="flex flex-row font-poppins">
+              <h3 className="text-zinc-100 font-bold px-1 ">Email: </h3>
+              <p className="text-zinc-100 ">ayotech@gmail.com </p>
+            </div>
+          </div>
+
+
+
+
+
+
+          <div className="px-24">
+            <h2 className="text-violet-500 text-lg font-bold font-montserrat">
+              Dados da empresa:
+            </h2>
+
+            <div >
+              <div className="flex flex-row font-poppins">
+                <h3 className="text-zinc-100 font-bold px-1">Endereço:</h3>
+                <p className="text-zinc-100 ">
+                  Av. Andrômeda, 2.000 - Alphaville,
+                </p>
+              </div>
+
+              <div className="flex flex-row font-poppins">
+                <h3 className="text-zinc-100 font-bold px-1">Bairro:</h3>
+                <p className="text-zinc-100 ">Barueri - SP,</p>
+              </div>
+
+              <div className="flex flex-row font-poppins">
+                <h3 className="text-zinc-100 font-bold px-1">CEP: </h3>
+                <p className="text-zinc-100 ">06473-000</p>
+              </div>
+
+              <div className="flex flex-row font-poppins">
+                <h3 className="text-zinc-100 font-bold px-1">CNPJ:</h3>
+                <p className="text-zinc-100 ">04.354.654/0021-22</p>
+              </div>
+            </div>
           </div>
         </div>
       </div>

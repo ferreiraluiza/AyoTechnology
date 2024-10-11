@@ -9,9 +9,10 @@
 
 
 
-@layer utilities{
-    .scrollbar{
-        @apply  overflow-auto scrollbar-thin scrollbar-thumb-violet-800 scrollbar-track-zinc-900 ;
-        
+@layer utilities {
+    .scrollbar {
+      @apply  scrollbar-thin scrollbar-thumb-violet-800 scrollbar-track-zinc-900 ;
     }
 }
+  
+  
