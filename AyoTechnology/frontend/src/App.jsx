@@ -1,6 +1,6 @@
 import "./App.css";
 import {useRef} from "react";
-
+import {Link} from 'react-router-dom';
 export default function App() {
 
 const sectionRef  = useRef(null);
@@ -37,6 +37,7 @@ const scrollToSection2 =() => sectionRef2.current.scrollIntoView({behavior: 'smo
             <span className="absolute left-0 right-0 bottom-0 h-[2px] bg-gradient-to-r from-violet-700 to-indigo-700 scale-x-0 transition-transform duration-300 group-hover:scale-x-100"></span>
           </button>
 
+          <Link to='/login'>
           <button
             className="px-8 py-2 border-2 border-transparent rounded-full 
         bg-gradient-to-r from-violet-600 to-indigo-500
@@ -46,6 +47,7 @@ const scrollToSection2 =() => sectionRef2.current.scrollIntoView({behavior: 'smo
               Login
             </p>
           </button>
+          </Link>
         </div>
 
         {/*restante*/}
