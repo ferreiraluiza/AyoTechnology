@@ -18,20 +18,18 @@ endpoints.post('/cadastro', async(req, resp) =>{
     }
 })
 
-endpoints.get("/verificar", async(req,resp) =>{
+endpoints.get('/usuarios', async (req, resp) => {
     try {
-        let email = req.query.email
-        if(!email){
-            email = "";
-        }
-        let consulta = await db.VerificarUser(email)
-        resp.send(consulta)
-    } 
-    catch (err) {
-        resp.status(400).send({
-            erro:err.message
-        })
+        // Função que busca todos os usuários no banco
+        let usuarios = await db.buscarUsuarios();
+
+        resp.send(usuarios);
+    } catch (err) {
+        resp.status(500).send({
+            erro: err.message
+        });
     }
-})
+});
+
 
 export default endpoints;

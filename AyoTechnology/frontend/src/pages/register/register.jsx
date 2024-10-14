@@ -1,6 +1,37 @@
 import "./register.css";
+import { useState } from "react";
 import { Link } from "react-router-dom";
 export default function Register() {
+  const [email, setEmail] = useState("");
+  const [senha, setSenha] = useState("");
+  const [senhaConfirmacao, setSenhaConfirmacao] = useState("");
+  const [mensagem, setMensagem] = useState("");
+
+  const registrar = async (event) => {
+    event.preventDefault();
+
+    if (senha !== senhaConfirmacao) {
+      setMensagem("As senhas não coincidem");
+      return;
+    }
+    try {
+      const resposta = await fetch("http://localhost:5001/cadastro", {
+        method: "POST",
+        headers: {
+          "Content-Type": "application/json",
+        },
+        body: JSON.stringify({ email, password: senha }),
+      });
+      const dados = await resposta.json();
+      if (resposta.ok) {
+        setMensagem(`registro feito com sucesso! ID: ${dados.novoid}`);
+      } else {
+        setMensagem(`erro: ${dados.erro}`);
+      }
+    } catch (err) {
+      setMensagem(`erro ao se comunicar com o servidor`);
+    }
+  };
   return (
     <div
       className="h-screen bg-cover bg-center flex justify-center items-center"
@@ -18,7 +49,7 @@ export default function Register() {
             </p>
           </div>
           <div className="mt-8 mx-auto w-full max-w-md ">
-            <div className="space-y-6">
+            <form onSubmit={registrar} className="space-y-6">
               <div>
                 <label
                   htmlFor="email"
@@ -32,6 +63,9 @@ export default function Register() {
                     name="email"
                     autoComplete="email"
                     required
+                    type="email"
+                    value={email}
+                    onChange={(e) => setEmail(e.target.value)}
                     className="block w-full appearance-none rounded-md text-zinc-100 bg-zinc-800 border border-violet-700 px-3 py-2 focus:outline-none focus:ring-0 focus:border-purplecustom focus:drop-shadow-input/18 text-sm"
                   />
                 </div>
@@ -49,6 +83,9 @@ export default function Register() {
                     id="password"
                     name="password"
                     required
+                    type="password"
+                    value={senha}
+                    onChange={(e) => setSenha(e.target.value)}
                     className="block w-full appearance-none rounded-md text-zinc-100 bg-zinc-800 border border-violet-700 px-3 py-2 focus:outline-none focus:ring-0 focus:border-purplecustom focus:drop-shadow-input/18 text-sm"
                   />
                 </div>
@@ -66,6 +103,9 @@ export default function Register() {
                     id="passwordAgain"
                     name="passwordAgain"
                     required
+                    type="password"
+                    value={senhaConfirmacao}
+                    onChange={(e) => setSenhaConfirmacao(e.target.value)}
                     className="block w-full appearance-none rounded-md text-zinc-100 bg-zinc-800 border border-violet-700 px-3 py-2 focus:outline-none focus:ring-0 focus:border-purplecustom focus:drop-shadow-input/18 text-sm"
                   />
                 </div>
@@ -92,6 +132,8 @@ export default function Register() {
                   Registrar
                 </button>
               </div>
+              {mensagem && <p className="text-zinc-50"> {mensagem}</p>}
+
               <div className="mt-6 ">
                 <div className="relative">
                   <div className="absolute inset-0 flex items-center">
@@ -110,7 +152,7 @@ export default function Register() {
                   </div>
                 </div>
               </div>
-            </div>
+            </form>
           </div>
         </div>
       </div>

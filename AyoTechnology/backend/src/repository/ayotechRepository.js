@@ -12,13 +12,11 @@ values (?,?)`;
   return info.insertId;
 }
 
-export async function VerificarUser( email) {
-  const comando = `SELECT id_user,
-       email_user,
-       password_user
-        FROM tb_user
-        WHERE email_user LIKE ?; `;
-        const resposta = await con.query(comando, ["%"+email+ "%"])
-        let info = resposta[0]
-        return info 
+export async function buscarUsuarios() {
+  const comando = `
+    SELECT id_user, email_user, password_user 
+    FROM tb_user`;
+
+  const resposta = await con.query(comando);
+  return resposta[0]; // Retorna o array com todos os usuários
 }

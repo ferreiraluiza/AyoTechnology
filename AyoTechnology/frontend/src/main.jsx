@@ -6,6 +6,8 @@ import Register from "./pages/register/register.jsx";
 import App from './landing.jsx'
 import './index.css'
 
+
+
 createRoot(document.getElementById('root')).render(
   <StrictMode>
     <Router>

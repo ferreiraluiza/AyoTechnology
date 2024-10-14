@@ -1,6 +1,7 @@
 import "./login.css";
 import { Link } from "react-router-dom";
 export default function Login() {
+
   return (
     <div
       className="h-screen bg-cover bg-center flex justify-center items-center"
@@ -9,10 +10,10 @@ export default function Login() {
       <div className="relative rounded-lg max-w-lg m-auto bg-zinc-900 px-4 pt-5 pb-4 border border-zinc-800 shadow-[0_2px_4px_rgba(57,62,86,0.5)]">
         <div className=" flex min-h-full flex-col justify-center">
           <div className="mx-auto w-full max-w-md text-center flex flex-col items-center">
-            <h2 className="text-center text-zinc-100 mt-6 text-3xl font-bold tracking-tight">
+            <h2 className="text-center text-zinc-100 mt-6 text-3xl font-bold tracking-tight font">
               Faça Login
             </h2>
-            <p className="mt-2 text-center text-base text-zinc-300 font-medium">
+            <p className="mt-2 text-center text-base text-zinc-300 font-medium ">
               Seja bem-vindo de volta! Está preparado para transformar o seu
               sonho em um site que pode revolucionar o futuro?
             </p>
@@ -32,6 +33,7 @@ export default function Login() {
                     name="email"
                     autoComplete="email"
                     required
+                    type="email"
                     className="block w-full appearance-none rounded-md text-zinc-100 bg-zinc-800 border border-violet-700 px-3 py-2 focus:outline-none focus:ring-0 focus:border-purplecustom focus:drop-shadow-input/18 text-sm"
                   />
                 </div>
@@ -49,6 +51,8 @@ export default function Login() {
                     id="password"
                     name="password"
                     required
+                    autoComplete="password"
+                    type="password"
                     className="block w-full appearance-none rounded-md text-zinc-100 bg-zinc-800 border border-violet-700 px-3 py-2 focus:outline-none focus:ring-0 focus:border-purplecustom focus:drop-shadow-input/18 text-sm"
                   />
                 </div>
@@ -71,7 +75,7 @@ export default function Login() {
               </div>
               <div>
                 <button className="disabled:opacity-40 flex w-full justify-center rounded-md border border-transparent bg-violet-600 py-2 px-4 text-sm font-medium text-black-10 hover:bg-violet-700 focus:outline-none focus:ring-2 focus:ring-violet-400 focus:ring-offset-2">
-                  Registrar
+                  Entrar
                 </button>
               </div>
               <div className="mt-6 ">
