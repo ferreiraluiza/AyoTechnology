@@ -1,7 +1,7 @@
 import e from 'cors'
-import nutrilifeController from './src/controller/nutrilifeController.js'
+import ayotechController from "./src/controller/ayotechController.js"
 
 
 export default function adiconarRotas(servidor){
-    servidor.use(nutrilifeController)
+    servidor.use(ayotechController)
 }

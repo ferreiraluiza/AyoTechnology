@@ -6,14 +6,14 @@ export default function Login() {
       className="h-screen bg-cover bg-center flex justify-center items-center"
       style={{ backgroundImage: `url(${"/assets/image/imagem1.svg"})` }}
     >
-      <div className="relative rounded-lg max-w-lg m-auto bg-zinc-900 px-4 pt-5 pb-4 border border-violet-800 shadow-[0_2px_4px_rgba(57,62,86,0.5)]">
+      <div className="relative rounded-lg max-w-lg m-auto bg-zinc-900 px-4 pt-5 pb-4 border border-zinc-800 shadow-[0_2px_4px_rgba(57,62,86,0.5)]">
         <div className=" flex min-h-full flex-col justify-center">
           <div className="mx-auto w-full max-w-md text-center flex flex-col items-center">
             <h2 className="text-center text-zinc-100 mt-6 text-3xl font-bold tracking-tight">
               Faça Login
             </h2>
             <p className="mt-2 text-center text-base text-zinc-300 font-medium">
-              Seja bem-vindo de volta! Está preparado para tranformar o seu
+              Seja bem-vindo de volta! Está preparado para transformar o seu
               sonho em um site que pode revolucionar o futuro?
             </p>
           </div>

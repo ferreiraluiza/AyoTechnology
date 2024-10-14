@@ -10,5 +10,5 @@ adiconarRotas(servidor)
 
 
 const PORT = process.env.PORT
-servidor.listen(process.env.PORT, ()=>console.log(`subiu na ${PORT}`));
+servidor.listen(process.env.PORT, ()=>console.log(`subiu na ${PORT} (⌐■_■)`));
 

@@ -18,6 +18,6 @@ const con  = await mysql.createConnection({
     }
 })
 
-console.log('database conectado');
+console.log('database conectado ( ﾉ ﾟｰﾟ)ﾉ');
 
 export default con
