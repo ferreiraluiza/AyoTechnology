@@ -1,11 +1,14 @@
 import "./register.css";
 import { useState } from "react";
 import { Link } from "react-router-dom";
+import axios from "axios"
+import { useNavigate } from "react-router-dom";
 export default function Register() {
   const [email, setEmail] = useState("");
   const [senha, setSenha] = useState("");
   const [senhaConfirmacao, setSenhaConfirmacao] = useState("");
   const [mensagem, setMensagem] = useState("");
+  const navigate = useNavigate();
 
   const registrar = async (event) => {
     event.preventDefault();
@@ -14,24 +17,26 @@ export default function Register() {
       setMensagem("As senhas não coincidem");
       return;
     }
-    try {
-      const resposta = await fetch("http://localhost:5001/cadastro", {
-        method: "POST",
-        headers: {
-          "Content-Type": "application/json",
-        },
-        body: JSON.stringify({ email, password: senha }),
-      });
-      const dados = await resposta.json();
-      if (resposta.ok) {
-        setMensagem(`registro feito com sucesso! ID: ${dados.novoid}`);
-      } else {
-        setMensagem(`erro: ${dados.erro}`);
-      }
-    } catch (err) {
-      setMensagem(`erro ao se comunicar com o servidor`);
-    }
-  };
+   try {
+    const resposta = await axios.post("http://localhost:5001/cadastro", {
+      email:email,
+      senha: senha,
+
+      
+    });
+    setMensagem(`Usuário registrado com sucesso! ID: ${resposta.data.novoId}`);
+
+    setTimeout(() => {
+      navigate('/login'); // Redireciona para a página de login
+    }, 2000);
+   } catch (erro) {
+    setMensagem(erro.response?.data?.erro || 'Erro ao conectar com o servidor.');
+
+   }
+
+
+
+  }
   return (
     <div
       className="h-screen bg-cover bg-center flex justify-center items-center"
@@ -128,7 +133,8 @@ export default function Register() {
                 </div>
               </div>
               <div>
-                <button className="disabled:opacity-40 flex w-full justify-center rounded-md border border-transparent bg-violet-600 py-2 px-4 text-sm font-medium text-black-10 hover:bg-violet-700 focus:outline-none focus:ring-2 focus:ring-violet-400 focus:ring-offset-2">
+                <button type="submit"
+                className="disabled:opacity-40 flex w-full justify-center rounded-md border border-transparent bg-violet-600 py-2 px-4 text-sm font-medium text-black-10 hover:bg-violet-700 focus:outline-none focus:ring-2 focus:ring-violet-400 focus:ring-offset-2">
                   Registrar
                 </button>
               </div>

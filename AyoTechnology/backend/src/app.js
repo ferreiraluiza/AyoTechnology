@@ -5,7 +5,7 @@ import adiconarRotas from "../rotas.js";
 
 const servidor = express();
 servidor.use(express.json())
-
+servidor.use(cors())
 adiconarRotas(servidor)
 
 
