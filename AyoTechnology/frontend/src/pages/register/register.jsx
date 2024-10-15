@@ -3,6 +3,8 @@ import { useState } from "react";
 import { Link } from "react-router-dom";
 import axios from "axios"
 import { useNavigate } from "react-router-dom";
+
+
 export default function Register() {
   const [email, setEmail] = useState("");
   const [senha, setSenha] = useState("");
@@ -27,7 +29,7 @@ export default function Register() {
     setMensagem(`Usuário registrado com sucesso! ID: ${resposta.data.novoId}`);
 
     setTimeout(() => {
-      navigate('/login'); // Redireciona para a página de login
+      navigate('/login');
     }, 2000);
    } catch (erro) {
     setMensagem(erro.response?.data?.erro || 'Erro ao conectar com o servidor.');
@@ -71,7 +73,7 @@ export default function Register() {
                     type="email"
                     value={email}
                     onChange={(e) => setEmail(e.target.value)}
-                    className="block w-full appearance-none rounded-md text-zinc-100 bg-zinc-800 border border-violet-700 px-3 py-2 focus:outline-none focus:ring-0 focus:border-purplecustom focus:drop-shadow-input/18 text-sm"
+                    className="block w-full appearance-none rounded-md text-zinc-100 bg-zinc-800 border border-violet-700 px-3 py-2 focus:outline-none focus:ring-0 focus:border-purple focus:drop-shadow-input/18 text-sm"
                   />
                 </div>
               </div>
@@ -91,7 +93,7 @@ export default function Register() {
                     type="password"
                     value={senha}
                     onChange={(e) => setSenha(e.target.value)}
-                    className="block w-full appearance-none rounded-md text-zinc-100 bg-zinc-800 border border-violet-700 px-3 py-2 focus:outline-none focus:ring-0 focus:border-purplecustom focus:drop-shadow-input/18 text-sm"
+                    className="block w-full appearance-none rounded-md text-zinc-100 bg-zinc-800 border border-violet-700 px-3 py-2 focus:outline-none focus:ring-0 focus:border-purple focus:drop-shadow-input/18 text-sm"
                   />
                 </div>
               </div>
@@ -111,7 +113,7 @@ export default function Register() {
                     type="password"
                     value={senhaConfirmacao}
                     onChange={(e) => setSenhaConfirmacao(e.target.value)}
-                    className="block w-full appearance-none rounded-md text-zinc-100 bg-zinc-800 border border-violet-700 px-3 py-2 focus:outline-none focus:ring-0 focus:border-purplecustom focus:drop-shadow-input/18 text-sm"
+                    className="block w-full appearance-none rounded-md text-zinc-100 bg-zinc-800 border border-violet-700 px-3 py-2 focus:outline-none focus:ring-0 focus:border-purple focus:drop-shadow-input/18 text-sm"
                   />
                 </div>
               </div>
