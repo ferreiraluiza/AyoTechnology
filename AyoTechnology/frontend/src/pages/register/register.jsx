@@ -71,7 +71,7 @@ export default function Register() {
                     type="email"
                     value={email}
                     onChange={(e) => setEmail(e.target.value)}
-                    className="block w-full appearance-none rounded-md text-zinc-100 bg-zinc-800 border border-violet-700 px-3 py-2 focus:outline-none focus:ring-0 focus:border-purplecustom focus:drop-shadow-input/18 text-sm"
+                    className="block w-full appearance-none rounded-md text-zinc-100 bg-zinc-800 border border-violet-700 px-3 py-2 focus:outline-none focus:ring-0 focus:border-purple focus:drop-shadow-input/18 text-sm"
                   />
                 </div>
               </div>
@@ -91,7 +91,7 @@ export default function Register() {
                     type="password"
                     value={senha}
                     onChange={(e) => setSenha(e.target.value)}
-                    className="block w-full appearance-none rounded-md text-zinc-100 bg-zinc-800 border border-violet-700 px-3 py-2 focus:outline-none focus:ring-0 focus:border-purplecustom focus:drop-shadow-input/18 text-sm"
+                    className="block w-full appearance-none rounded-md text-zinc-100 bg-zinc-800 border border-violet-700 px-3 py-2 focus:outline-none focus:ring-0 focus:border-purple focus:drop-shadow-input/18 text-sm"
                   />
                 </div>
               </div>
@@ -111,7 +111,7 @@ export default function Register() {
                     type="password"
                     value={senhaConfirmacao}
                     onChange={(e) => setSenhaConfirmacao(e.target.value)}
-                    className="block w-full appearance-none rounded-md text-zinc-100 bg-zinc-800 border border-violet-700 px-3 py-2 focus:outline-none focus:ring-0 focus:border-purplecustom focus:drop-shadow-input/18 text-sm"
+                    className="block w-full appearance-none rounded-md text-zinc-100 bg-zinc-800 border border-violet-700 px-3 py-2 focus:outline-none focus:ring-0 focus:border-purple focus:drop-shadow-input/18 text-sm"
                   />
                 </div>
               </div>
