@@ -3,6 +3,8 @@ import { useState } from "react";
 import { Link } from "react-router-dom";
 import axios from "axios"
 import { useNavigate } from "react-router-dom";
+
+
 export default function Register() {
   const [email, setEmail] = useState("");
   const [senha, setSenha] = useState("");
@@ -27,7 +29,7 @@ export default function Register() {
     setMensagem(`Usuário registrado com sucesso! ID: ${resposta.data.novoId}`);
 
     setTimeout(() => {
-      navigate('/login'); // Redireciona para a página de login
+      navigate('/login');
     }, 2000);
    } catch (erro) {
     setMensagem(erro.response?.data?.erro || 'Erro ao conectar com o servidor.');
