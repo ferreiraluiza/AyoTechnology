@@ -22,8 +22,9 @@ endpoints.post('/cadastro', async(req, resp) =>{
     }
 })
 
-endpoints.get('/usuarios', async (req, resp) => {
+endpoints.get('/login', async (req, resp) => {
     try {
+        let user = req.query
        let usuarios = await db.buscarUsuarios();
         resp.send(usuarios);
     } catch (err) {
