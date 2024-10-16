@@ -1,0 +1,88 @@
+// server.js
+const express = require('express');
+const bodyParser = require('body-parser');
+
+const app = express();
+const port = 3001;
+
+app.use(bodyParser.json());
+
+const usuarios = {
+    usuario1: 'senha1',
+    usuario2: 'senha2',
+};
+
+app.post('/login', (req, res) => {
+    const { usuario, senha } = req.body;
+
+    if (usuarios[usuario] && usuarios[usuario] === senha) {
+        res.json({ message: 'Login bem-sucedido!' });
+    } else {
+        res.status(401).json({ message: 'Usuário ou senha incorretos.' });
+    }
+});
+
+app.listen(port, () => {
+    console.log(`Servidor rodando na porta ${port}`);
+});
+
+
+import React, { useState } from 'react';
+import axios from 'axios';
+
+const Login = () => {
+    const [usuario, setUsuario] = useState('');
+    const [senha, setSenha] = useState('');
+    const [mensagem, setMensagem] = useState('');
+
+    const handleLogin = async (e) => {
+        e.preventDefault();
+        setMensagem('');
+
+        try {
+            const response = await axios.post('http://localhost:3001/login', {
+                usuario,
+                senha,
+            });
+            setMensagem(response.data.message);
+        } catch (error) {
+            if (error.response) {
+                setMensagem(error.response.data.message);
+            } else {
+                setMensagem('Erro ao conectar ao servidor.');
+            }
+        }
+    };
+
+    return (
+        <div>
+            <h2>Login</h2>
+            <form onSubmit={handleLogin}>
+                <div>
+                    <label>
+                        Usuário:
+                        <input
+                            type="text"
+                            value={usuario}
+                            onChange={(e) => setUsuario(e.target.value)}
+                        />
+                    </label>
+                </div>
+                <div>
+                    <label>
+                        Senha:
+                        <input
+                            type="password"
+                            value={senha}
+                            onChange={(e) => setSenha(e.target.value)}
+                        />
+                    </label>
+                </div>
+                <button type="submit">Entrar</button>
+            </form>
+            {mensagem && <p>{mensagem}</p>}
+        </div>
+    );
+};
+
+export default Login;
