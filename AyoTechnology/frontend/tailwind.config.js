@@ -1,3 +1,4 @@
+/** @type {import('tailwindcss').Config} */
 import { fontFamily } from "tailwindcss/defaultTheme";
 import plugin from "tailwindcss/plugin";
 
@@ -17,25 +18,6 @@ export default {
           4: "#7ADB78",
           5: "#858DFF",
           6: "#FF98E2",
-          "black-2": "#F4F7FC",
-        "black-10": "#F8FBFF",
-        "black-20": "#eff5f5",
-        "black-35": "#CAD2E0",
-        "black-40": "#a6b0c3",
-        "black-45": "#9DA9C1",
-        "black-50": "#8694B2",
-        "black-60": "#717C99",
-        "black-65": "#5D657F",
-        "black-70": "#393E56",
-        "black-75": "#2C3043",
-        "black-80": "#1D2136",
-        "black-85": "#15171E",
-        "black-95": "#0D0E12",
-        "black-100": "#040506",
-        "mixer-pinker": "#995DF9",
-        "purple-light": "#665BFA",
-        purple: "#6301FF",
-        warning: "#E03020",
         },
         stroke: {
           1: "#26242C",
