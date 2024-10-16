@@ -1,13 +1,12 @@
 import "./register.css";
 import { useState } from "react";
 import { Link } from "react-router-dom";
-import axios from "axios"
+import axios from "axios";
 import { useNavigate } from "react-router-dom";
-
 
 export default function Register() {
   const [email, setEmail] = useState("");
-  const [senha, setSenha] = useState("");
+  const [password, setPassword] = useState("");
   const [senhaConfirmacao, setSenhaConfirmacao] = useState("");
   const [mensagem, setMensagem] = useState("");
   const navigate = useNavigate();
@@ -15,28 +14,28 @@ export default function Register() {
   const registrar = async (event) => {
     event.preventDefault();
 
-    if (senha !== senhaConfirmacao) {
+    if (password !== senhaConfirmacao) {
       setMensagem("As senhas não coincidem");
       return;
     }
-   try {
-    const resposta = await axios.post("http://localhost:5001/cadastro", {
-      email:email,
-      senha: senha,
+    try {
+      const resposta = await axios.post("http://localhost:5001/cadastro", {
+        email: email,
+        password: password,
+      });
+      setMensagem(
+        `Usuário registrado com sucesso! ID: ${resposta.data.novoId}`
+      );
 
-      
-    });
-    setMensagem(`Usuário registrado com sucesso! ID: ${resposta.data.novoId}`);
-
-    setTimeout(() => {
-      navigate('/login');
-    }, 2000);
-   } catch (erro) {
-    setMensagem(erro.response?.data?.erro || 'Erro ao conectar com o servidor.');
-
-   }
-
-  }
+      setTimeout(() => {
+        navigate("/login");
+      }, 2000);
+    } catch (erro) {
+      setMensagem(
+        erro.response?.data?.erro || "Erro ao conectar com o servidor."
+      );
+    }
+  };
   return (
     <div
       className="h-screen bg-cover bg-center flex justify-center items-center"
@@ -89,8 +88,8 @@ export default function Register() {
                     name="password"
                     required
                     type="password"
-                    value={senha}
-                    onChange={(e) => setSenha(e.target.value)}
+                    value={password}
+                    onChange={(e) => setPassword(e.target.value)}
                     className="block w-full appearance-none rounded-md text-zinc-100 bg-zinc-800 border border-violet-700 px-3 py-2 focus:outline-none focus:ring-0 focus:border-purple focus:drop-shadow-input/18 text-sm"
                   />
                 </div>
@@ -133,8 +132,10 @@ export default function Register() {
                 </div>
               </div>
               <div>
-                <button type="submit"
-                className="disabled:opacity-40 flex w-full justify-center rounded-md border border-transparent bg-violet-600 py-2 px-4 text-sm font-medium text-black-10 hover:bg-violet-700 focus:outline-none focus:ring-2 focus:ring-violet-400 focus:ring-offset-2">
+                <button
+                  type="submit"
+                  className="disabled:opacity-40 flex w-full justify-center rounded-md border border-transparent bg-violet-600 py-2 px-4 text-sm font-medium text-black-10 hover:bg-violet-700 focus:outline-none focus:ring-2 focus:ring-violet-400 focus:ring-offset-2"
+                >
                   Registrar
                 </button>
               </div>
