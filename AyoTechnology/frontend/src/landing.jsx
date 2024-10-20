@@ -1,19 +1,20 @@
-import ButtonGradient from "./assets/svg/ButtonGradient"
+import ButtonGradient from "./assets/svg/ButtonGradient";
 import Benefits from "./components/Benefits";
 import Collaboration from "./components/collaboration";
-import Header from "./components/Header"
+import Header from "./components/Header";
 import Hero from "./components/Hero";
-const App = ()=> {
+import Services from "./components/Services";
+const App = () => {
   return (
     <>
-    <div className="pt-[4.75rem] lg:pt-[5.25rem] overflow-hidden">
-      
-      <Header/>
-      <Hero/>
-      <Benefits/>
-      <Collaboration/>
-      </div> 
-    <ButtonGradient/>
+      <div className="pt-[4.75rem] lg:pt-[5.25rem] overflow-hidden">
+        <Header />
+        <Hero />
+        <Benefits />
+        <Collaboration />
+        <Services />
+      </div>
+      <ButtonGradient />
     </>
   );
 };
