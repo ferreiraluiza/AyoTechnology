@@ -69,6 +69,7 @@ const Collaboration = () => {
             <LeftCurve/>
             <RightCurve/>
           </div>
+          
         </div>
       </div>
     </Section>
