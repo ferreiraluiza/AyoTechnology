@@ -1,4 +1,4 @@
-import { useLocation } from "react-router-dom";
+import { Link, useLocation } from "react-router-dom";
 import { brainwave } from "../assets";
 import { disablePageScroll, enablePageScoll } from "scroll-lock";
 import { navigation } from "../constants";
@@ -63,22 +63,25 @@ const Header = () => {
           </div>
           <HamburgerMenu />
         </nav>
-        <a
-          href="#signup"
+        <Link to="/register"
+          
           className=" button hidden mr-8 text-n-1/50 transition-colors hover:text-n-1 lg:block"
         >
-          New account
-        </a>
-        <Button className="hidden lg:flex" href="#login">
-          Sign up
-        </Button>
-        <Button
-          className="ml-auto lg:hidden"
-          px="px-3"
-          onClick={toggleNavigation}
-        >
-          <MenuSvg openNavigation={openNavigation} />
-        </Button>
+          Nova conta
+        </Link >
+        <Link to="/login">       
+          <Button className="hidden lg:flex" href="#login">
+            Entrar
+          </Button>
+          <Button
+            className="ml-auto lg:hidden"
+            px="px-3"
+            onClick={toggleNavigation}
+          >
+            <MenuSvg openNavigation={openNavigation} />
+          </Button>
+          </Link>
+       
       </div>
     </div>
   );
