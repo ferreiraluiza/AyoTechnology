@@ -66,7 +66,7 @@ import {
     {
       id: "5",
       title: "Entrar",
-      url: "#login",
+      url: "/login",
       onlyMobile: true,
     },
   ];
