@@ -26,7 +26,7 @@ const Pricing = () => {
           </div>
         </div>
         <Heading className="flex flex-col-reverse"
-          title="Pay once, use forever"
+          title="Pague uma vez, use para sempre"
           tag="Comece agora com a AyoTechnology"
         />
 
@@ -37,7 +37,7 @@ const Pricing = () => {
         </div>
         <div className="flex justify-center mt-10">
             <a className="text-xs font-code font-bold translate-wider uppercase border-b"
-            href="/pricing">Ver todos os detalhes</a>
+            href="#">Ver todos os detalhes</a>
         </div>
       </div>
     </Section>
