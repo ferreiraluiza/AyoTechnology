@@ -60,7 +60,7 @@ import {
     {
       id: "4",
       title: "Nova conta",
-      url: "#signup",
+      url: "",
       onlyMobile: true,
     },
     {
