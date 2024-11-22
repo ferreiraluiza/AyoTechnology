@@ -40,7 +40,7 @@ const Benefits = () => {
               {item.light && <GradientLight />}
               <div
                 className=" absolute inset-0.5 bg-n-8"
-                style={{ clipPath: "url(#benefits)" }}
+                style={{ clipPath: "url(#)" }}
               >
                 <div className="absolute inset-0 opacity-0 transition-opacity hover:opacity-10">
                   {item.imageUrl && (

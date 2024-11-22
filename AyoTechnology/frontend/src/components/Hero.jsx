@@ -42,7 +42,7 @@ const Hero = () => {
             Liberte seu potencial com a Ayotechnology. Aumente sua produtividade
             com nossa empresa de criação de sites.
           </p>
-          <Button href="/pricing" white>
+          <Button href="#" white>
             Vamos começar
           </Button>
         </div>
